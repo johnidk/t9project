@@ -1,19 +1,27 @@
 <?php 
 
-$dados = $_POST['dados'];
+//$dados = $_POST['dados'];
 
-$dados= "222 22 2 333 33 3 444 44 4 555 55 5 666 66 6 777 77 7 888 88 8 999 99 9 000 00 0"
+$dados= "2 222 222 33 66 8 88 777 33";
 
-$arrayDados= explode(" ", $dados)
+$arrayDados= explode(" ", $dados);
+
+
+
+
+
+
 $numero = array();
 
    foreach ($arrayDados as $value){
 
       switch($value[0]){
 
-        case:2
+        case 2:
 
             $tamanho = strlen($value);
+         
+
             if($tamanho == 1){
               $numeros[] = 'a';
             }else if($tamanho == 2) {
@@ -21,10 +29,12 @@ $numero = array();
             }else{
               $numeros[] = 'c';
             }
+        break;
 
-        case:3
+        case 3:
 
             $tamanho = strlen($value);
+
             if($tamanho == 1){
               $numeros[] = 'd';
             }else if($tamanho == 2) {
@@ -32,8 +42,8 @@ $numero = array();
             }else{
               $numeros[] = 'f';
             }
-
-        case:4
+        break;
+        case 4:
             
             $tamanho = strlen($value);
             if($tamanho == 1){
@@ -43,8 +53,8 @@ $numero = array();
             }else{
               $numeros[] = 'i';
           }
-
-        case:5
+        break;
+        case 5:
             $tamanho = strlen($value);
             if($tamanho == 1){
               $numeros[] = 'j';
@@ -54,20 +64,65 @@ $numero = array();
               $numeros[] = 'l';
           }
 
+        break;
+        case 6:
+            $tamanho = strlen($value);
+            if($tamanho == 1){
+              $numeros[] = 'm';
+            }else if($tamanho == 2) {
+              $numeros[] = 'n';
+            }else{
+              $numeros[] = 'o';
+          }
+        break;
+        case 7:
 
-        case:6
+          $tamanho = strlen($value);
+          if($tamanho == 1){
+            $numeros[] = 'p';
+          }else if($tamanho == 2) {
+            $numeros[] = 'q';
+          }else if($tamanho == 3){
+            $numeros[] = 'r';
+          }else{
+            $numeros[] = 's';
+            }
+         break;
+        case 8:
+            $tamanho = strlen($value);
+          if($tamanho == 1){
+            $numeros[] = 't';
+          }else if($tamanho == 2) {
+            $numeros[] = 'u';
+          }else{
+            $numeros[] = 'v';
+            }
+         break;
 
-        case:7
+        case 9:
+            $tamanho = strlen($value);
+          if($tamanho == 1){
+            $numeros[] = 'w';
+          }else if($tamanho == 2) {
+            $numeros[] = 'x';
+          }else if($tamanho == 3){
+            $numeros[] = 'y';
+          }else{
+            $numeros[] = 'z';
+            }
+         break;
 
-        case:8
-
-        case:9
-
-        case:0
-        
+        case "/" :
+            $numeros[] = ' ';
+        break;
       }
 
   }
        
-      
+
+foreach ($numeros as $value){
+    
+  echo  $value;
+    
+}
 
