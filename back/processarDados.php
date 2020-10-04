@@ -1,8 +1,7 @@
 <?php 
 
-//$dados = $_POST['dados'];
+$dados = $_POST['dados'];
 
-$dados= "2 222 222 33 66 8 88 777 33";
 
 $arrayDados= explode(" ", $dados);
 
